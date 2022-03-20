@@ -25,6 +25,13 @@ class TestContact(unittest.TestCase):
         self.assertEqual(self.new_contact.email, "james@ms.com")
 
 
+    def tearDown(self):
+        '''
+        teardown method that does clean up after each test case has run
+        '''
+        Contact.contact_list = []
+
+
     #second test
     def test_save_contact(self):
         '''
