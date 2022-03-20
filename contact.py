@@ -26,3 +26,9 @@ class Contact:
         save_contact saves contact objects into contact_list
         '''
         Contact.contact_list.append(self)
+
+    def delete_contact(self):
+        '''
+        delete_contact method deletes a saved contact from the contact list
+        '''
+        Contact.contact_list.remove(self)
