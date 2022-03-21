@@ -32,3 +32,17 @@ class Contact:
         delete_contact method deletes a saved contact from the contact list
         '''
         Contact.contact_list.remove(self)
+
+    @classmethod
+    def find_by_number(cls,number):
+        '''
+        method that takes in a number and returns a contact matches that number.
+
+        Args:
+            number:Phone number to search for
+        returns:
+            Contact of person tha tmatches the number
+        '''
+        for contact in cls.contact_list:
+            if contact.phone_number == number:
+                return contact
