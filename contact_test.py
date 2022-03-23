@@ -87,8 +87,9 @@ class TestContact(unittest.TestCase):
         test_contact = Contact("Test", "user", "0711345678", "test@user.com")#new contact
         test_contact.save_contact()
 
-        contact_exist = Contact.contact_exist("0711345678")
-        self.assertEqual(contact_exist)
+        contact_exists = Contact.contact_exist("0711345678")
+        
+        self.assertTrue(contact_exists)
 
 
 if __name__ == '__main__':
