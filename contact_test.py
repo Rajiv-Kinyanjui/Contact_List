@@ -1,6 +1,7 @@
 from cgi import test
 import unittest #Importing the unittest module
 from contact import Contact
+import pyperclip
 
 class TestContact(unittest.TestCase):
     '''
@@ -97,6 +98,16 @@ class TestContact(unittest.TestCase):
         method that returns a list of all contacts saved
         '''
         self.assertEqual(Contact.display_contacts(), Contact.contact_list)
+
+    #8th test
+    def test_copy_email(self):
+        '''
+        test to confirm that we are copying the email address from a found contact
+        '''
+        self.new_contact.save_contact()
+        Contact.copy_email("0711345678")
+
+        self.assertEqual(self.new_contact.email, pyperclip.paste)
 
 
 if __name__ == '__main__':
