@@ -107,7 +107,7 @@ class TestContact(unittest.TestCase):
         self.new_contact.save_contact()
         Contact.copy_email("0711345678")
 
-        self.assertEqual(self.new_contact.email, pyperclip.paste)
+        self.assertEqual(self.new_contact.email, pyperclip.paste())
 
 
 if __name__ == '__main__':
