@@ -27,3 +27,8 @@ def find_contact(number):
     '''
     return Contact.find_by_number(number)
 
+def check_existing_contacts(number):
+    '''
+    function that checks if a contact exists with that number and returns a boolean
+    '''
+    return Contact.contact_exist(number)
