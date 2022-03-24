@@ -66,3 +66,19 @@ def main():
         print("Use these short codes: cc - Create a new contact, dc - Display contacts, fc - Find a contact, ex - exit the contact list")
 
         short_code = input().lower()
+
+        if short_code == 'cc':
+            print("New contact")
+            print("-*10")
+
+            print("First name ...")
+            f_name = input()
+
+            print("Last name ...")
+            l_name = input()
+
+            print ("Phone number ...")
+            p_number = input()
+
+            print("Email address ...")
+            e_address = input()
