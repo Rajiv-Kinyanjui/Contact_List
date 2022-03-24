@@ -119,4 +119,10 @@ def main():
             
             else:
                 print("That contact does not exist")
-                
+        
+
+        elif short_code == 'ex':
+            print("Bye.......")
+            break
+        else:
+            print("I really didn`t get that. Please use the short codes")
