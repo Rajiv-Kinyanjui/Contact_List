@@ -1,4 +1,5 @@
 #!/usr/bin/env python3.6
+from operator import truediv
 from contact import Contact
 
 #Creating a contact
@@ -49,3 +50,16 @@ def display_contact():
     Function that returns all saved contacts
     '''
     return Contact.display_contacts()
+
+
+
+
+#Main function
+def main():
+    print("Hello Welcome to your contact list. What is your name?")
+    user_name = input()
+
+    print(f"Hello {user_name}. What would you like to do?")
+    print('\n')
+
+    
