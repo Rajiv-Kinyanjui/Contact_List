@@ -45,7 +45,7 @@ def check_existing_contacts(number):
 
 
 #Displaying all contacts
-def display_contact():
+def display_contacts():
     '''
     Function that returns all saved contacts
     '''
@@ -89,3 +89,17 @@ def main():
             print('\n')
             print(f"New contact{f_name} {l_name} created")
             print('\n')
+
+
+        elif short_code == 'dc':
+            if display_contacts():
+                print("Here is a list of all our contacts")
+                print('\n')
+
+                for contact in display_contacts():
+                    print(f"{contact.first_name} {contact.last_name} ..... {contact.phone_number}")
+                    print('\n')
+            else:
+                print('\n')
+                print("You do not seem to have any contacts saved")
+                print('\n')
