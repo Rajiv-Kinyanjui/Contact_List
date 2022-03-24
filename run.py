@@ -62,4 +62,7 @@ def main():
     print(f"Hello {user_name}. What would you like to do?")
     print('\n')
 
-    
+    while True:
+        print("Use these short codes: cc - Create a new contact, dc - Display contacts, fc - Find a contact, ex - exit the contact list")
+
+        short_code = input().lower()
