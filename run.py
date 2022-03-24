@@ -32,3 +32,9 @@ def check_existing_contacts(number):
     function that checks if a contact exists with that number and returns a boolean
     '''
     return Contact.contact_exist(number)
+
+def display_contact():
+    '''
+    Function that returns all saved contacts
+    '''
+    return Contact.display_contacts()
