@@ -63,7 +63,7 @@ def main():
     print('\n')
 
     while True:
-        print("Use these short codes: cc - Create a new contact, dc - Display contacts, fc - Find a contact, ex - exit the contact list")
+        print("Use these short codes: cc - Create a new contact, dc - Display contacts, fc - Find a contact, del - Delete a contact, ex - exit the contact list")
 
         short_code = input().lower()
 
