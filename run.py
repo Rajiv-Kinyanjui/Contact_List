@@ -69,7 +69,7 @@ def main():
 
         if short_code == 'cc':
             print("New contact")
-            print("-*10")
+            print("-"*10)
 
             print("First name ...")
             f_name = input()
@@ -87,7 +87,7 @@ def main():
 
             save_contacts(create_contact(f_name, l_name, p_number, e_address))#create and save new contact
             print('\n')
-            print(f"New contact{f_name} {l_name} created")
+            print(f"New contact {f_name} {l_name} created")
             print('\n')
 
 
@@ -119,6 +119,19 @@ def main():
             
             else:
                 print("That contact does not exist")
+
+        elif short_code == 'del':
+            print("Enter the number you want to search for")
+            search_number = int(input())
+
+            if check_existing_contacts(search_number):
+                search_contact = find_contact(search_contact)
+
+                print(f"{search_contact.first_name} {search_contact.last_name}")
+                print('-'*20)
+
+                del_contact(search_contact)
+                print("Your contact has been deleted")
         
 
         elif short_code == 'ex':
@@ -127,5 +140,5 @@ def main():
         else:
             print("I really didn`t get that. Please use the short codes")
 
-if __name__ = '__main__':
+if __name__ == '__main__':
     main()
