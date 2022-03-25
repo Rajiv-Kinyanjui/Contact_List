@@ -132,6 +132,24 @@ def main():
 
                 del_contact(search_contact)
                 print("Your contact has been deleted")
+            else:
+                print("The contact does not exist")
+
+        elif short_code == 'cp':
+            print("Enter the number you wish to copy the email address")
+            search_number = int(input())
+
+            if check_existing_contacts(search_number):
+                search_contact = find_contact(search_contact)
+
+                print(f"{search_contact.first_name} {search_contact.last_name}")
+                print('-'*20)
+
+                Contact.copy_email(search_number)
+                print('\n Your contact has been copied')
+            else:
+                print("The contact does not exist")
+
         
 
         elif short_code == 'ex':
